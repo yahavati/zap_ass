@@ -1,0 +1,547 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f3f4f6;
+  direction: rtl;
+  overflow-x: hidden;
+  color: #111827;
+}
+
+.app-wrapper {
+  min-height: 100vh;
+  background: #f3f4f6;
+  direction: rtl;
+}
+
+/* Top Navigation */
+.top-nav {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 28px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.nav-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.nav-subtitle {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* Main Layout */
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 32px 18px;
+  width: 100%;
+}
+
+/* Scan Card */
+.scan-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 1240px;
+  padding: 28px 32px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Card Header */
+.card-header {
+  text-align: right;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card-title-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.card-subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: right;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid #eef2f7;
+  margin: 18px 0;
+}
+
+/* Steps Section */
+.steps-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.step-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+.step-row-add {
+  justify-content: space-between;
+}
+
+.step-label {
+  font-size: 14px;
+  color: #374151;
+  text-align: right;
+  flex: 1;
+}
+
+.step-label-blue {
+  color: #2563eb;
+}
+
+.step-badge {
+  font-size: 11px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.step-badge.complete {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.step-badge.processing {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.step-badge-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  text-align: right;
+  margin-bottom: 14px;
+}
+
+/* Sources Grid */
+.sources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.source-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  background: #ffffff;
+  min-height: 108px;
+}
+
+.source-card-wide {
+  grid-column: span 1;
+}
+
+.source-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+  gap: 10px;
+}
+
+.source-right {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px;
+  min-width: 0;
+}
+
+.source-icon-box {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 12px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #374151;
+}
+
+.source-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  text-align: right;
+}
+
+.source-status-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Badges */
+.badge {
+  font-size: 11px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.complete-badge {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.processing-badge {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.verified-badge {
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 11px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.scanning-badge {
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 11px;
+  padding: 4px 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.secondary-badge {
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Address Cards */
+.address-card {
+  background: #ffffff;
+  border: 1px solid #e8edf2;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.address-card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+  gap: 16px;
+}
+
+.address-card-right {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 12px;
+  min-width: 0;
+}
+
+.address-card-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.address-icon-box {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 12px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #374151;
+}
+
+.address-url {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  direction: ltr;
+  unicode-bidi: plaintext;
+  text-align: right;
+}
+
+.address-desc {
+  font-size: 13px;
+  color: #94a3b8;
+  text-align: right;
+}
+
+.address-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.tag-count {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+
+/* Progress */
+.progress-section {
+  margin-bottom: 8px;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-bottom: 8px;
+}
+
+.progress-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+  text-align: right;
+  align-items: flex-end;
+  
+}
+
+.progress-percent {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.progress-bar-track {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #111827;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.progress-footer {
+  text-align: right;
+}
+
+.progress-more {
+  font-size: 12px;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* AI List */
+.ai-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.ai-list li {
+  font-size: 13px;
+  color: #374151;
+}
+
+/* CTA */
+.cta-section {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #1d4ed8;
+}
+
+/* Spinner Animation */
+.spinner {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Helpers for borders by status */
+.border-success {
+  border-color: #bbf7d0;
+}
+
+.border-processing {
+  border-color: #bfdbfe;
+}
+
+.border-neutral {
+  border-color: #e5e7eb;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .scan-card {
+    padding: 20px 16px;
+  }
+
+  .sources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .address-card-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .address-card-right,
+  .address-card-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 18px 10px;
+  }
+
+  .sources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-nav {
+    padding: 12px 16px;
+  }
+
+  .scan-card {
+    padding: 16px 12px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+}

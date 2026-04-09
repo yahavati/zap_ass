@@ -1,0 +1,329 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Noto Sans Hebrew", "Rubik", sans-serif;
+  background: #f3f4f6;
+  color: #0f172a;
+}
+
+.customer-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #f3f4f6;
+  padding: 40px 20px;
+  direction: rtl;
+}
+
+.customer-card {
+  width: 100%;
+  max-width: 800px; 
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  padding: 30px;
+}
+
+/* החלק העליון החדש בתוך הקופסה */
+.card-inner-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.page-title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #0f2747;
+}
+
+.page-sub-id {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #7a8699;
+}
+
+/* כפתור CRM */
+.crm-button {
+  border: none;
+  background: #2f6df6;
+  color: #ffffff;
+  min-width: 145px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(47, 109, 246, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+  transition: transform 0.2s;
+}
+
+.crm-button:hover {
+  transform: translateY(-2px);
+}
+
+.crm-icon {
+  font-size: 18px;
+  transform: rotate(-10deg);
+}
+
+/* Header של תוכן הכרטיס */
+.card-header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: right;
+}
+
+.header-texts {
+  text-align: right;
+}
+
+.business-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.business-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.site-button {
+  border: none;
+  background: #2f6df6;
+  color: #ffffff;
+  height: 36px;
+  min-width: 120px;
+  border-radius: 10px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* הפרדות */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 18px 0;
+}
+
+/* פריסת תוכן */
+.card-top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.left-column {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+
+.info-row {
+  display: flex;
+  align-items: center; 
+  gap: 10px;          
+  width: fit-content;  
+  margin-right: 0;     
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+}
+
+.info-icon {
+  width: auto;         
+  flex-shrink: 0;     
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.info-label {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.info-link {
+  color: #2f6df6;
+  text-decoration: none;
+}
+
+/* תגיות ומדדים */
+.priority-tag {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: #fff5d6;
+  color: #b7791f;
+  border: 1px solid #f4d58d;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.metric-item {
+  width: 100%;
+}
+
+.metric-top {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  margin-top: 4px;
+}
+
+.danger-pill {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #dc2626;
+  border: 1px solid #fecdd3;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* רשימות */
+.section-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;      
+}
+
+.bullet-list li {
+  position: relative;
+  padding-right: 20px;     
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #374151;
+  text-align: right;
+  white-space: nowrap;     
+}
+
+.bullet-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;              
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.blue-bullets li::before { background: #3b82f6; }
+.green-bullets li::before { background: #22c55e; }
+.purple-bullets li::before { background: #a855f7; }
+
+/* הערת AI */
+.ai-note {
+  margin-top: 30px;
+  background: #fef9c3;
+  border: 1px solid #fde047;
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.ai-note-title {
+  font-weight: 800;
+  color: #854d0e;
+  margin-bottom: 4px;
+}
+
+.ai-sparkle {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: #ca8a04;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  .customer-card { padding: 20px; }
+  .card-inner-topbar { flex-direction: column; align-items: flex-start; gap: 15px; }
+  .crm-button { width: 100%; }
+  .card-top-content { flex-direction: column; }
+  .left-column { width: 100%; flex-direction: row; flex-wrap: wrap; gap: 20px; }
+}
