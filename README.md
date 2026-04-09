@@ -156,7 +156,6 @@
 
 המערכת בנויה לפי רצף הניווט הבא:
 
-```text
 OnboardingDashboard
 → DigitalScanScreen
 → ExtractionResultsScreen
@@ -164,7 +163,7 @@ OnboardingDashboard
 → OnboardingPersonalized
 → CrmRecord
 
-RTL מלא
+
 
 המערכת מיועדת לעברית, לכן כל המסכים נבנו בכיוון ימין־לשמאל.
 
